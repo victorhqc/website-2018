@@ -18,6 +18,7 @@ module.exports = {
             'stage-3',
             ['env', { targets: { browsers: ['last 2 versions'] } }],
           ],
+          plugins: ['lodash'],
         },
       },
       {
