@@ -8,12 +8,12 @@ const {
 
 const config = {
   // Tell webpack the root file of our server application.
-  entry: '../src/client',
+  entry: './src/client',
 
   // Tell webpack where to put the output file that is generated.
   output: {
     filename: getFilename(),
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, '../public'),
   },
 };
 

@@ -13,12 +13,12 @@ const config = {
   target: 'node',
 
   // Tell webpack the root file of our server application.
-  entry: '../src/index.js',
+  entry: './src/index.js',
 
   // Tell webpack where to put the output file that is generated.
   output: {
     filename: getFilename(),
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
   },
 
   externals: [webpackNodeExternals()],

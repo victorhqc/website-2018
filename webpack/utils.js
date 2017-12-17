@@ -1,4 +1,4 @@
-const getFilename = () => `bundle${process.env.production === '' : '.dev'}.js`;
+const getFilename = () => `bundle${process.env.NODE_ENV === 'production' ? '' : '.dev'}.js`;
 
 module.exports = {
   getFilename,
