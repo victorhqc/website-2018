@@ -1,3 +1,9 @@
+/* eslint import/no-extraneous-dependencies: 0 */
+
+const webpack = require('webpack');
+
+const env = process.env.NODE_ENV || 'development';
+
 module.exports = {
   // Tell webpack to run babel on every file it runs through
   module: {
@@ -19,4 +25,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(env),
+    }),
+  ],
 };

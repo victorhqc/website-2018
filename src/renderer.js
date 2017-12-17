@@ -6,6 +6,8 @@ import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import Routes from './client/Routes';
 
+const version = '[AIV]{version}[/AIV]';
+
 export default ({ req, context }) => {
   const sheet = new ServerStyleSheet();
 
@@ -30,7 +32,10 @@ export default ({ req, context }) => {
   </head>
   <body>
     <div id="root">${content}</div>
-    <script src="bundle.js"></script>
+    <script src="bundle.js?${version}"></script>
+    <script>
+      window.__VERSION__=${version}
+    </script>
   </body>
 </html>`;
 };

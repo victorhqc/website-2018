@@ -1,6 +1,9 @@
+/* eslint import/no-extraneous-dependencies: 0 */
+
 const path = require('path');
 const merge = require('webpack-merge');
 const universalConfig = require('./webpack.universal.js');
+const productionConfig = require('./webpack.client.production');
 
 const {
   getFilename,
@@ -17,4 +20,4 @@ const config = {
   },
 };
 
-module.exports = merge(universalConfig, config);
+module.exports = merge(universalConfig, productionConfig, config);

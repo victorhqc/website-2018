@@ -1,7 +1,10 @@
+/* eslint import/no-extraneous-dependencies: 0 */
+
 const path = require('path');
 const merge = require('webpack-merge');
 const webpackNodeExternals = require('webpack-node-externals');
 const universalConfig = require('./webpack.universal.js');
+const productionConfig = require('./webpack.server.production.js');
 
 const {
   getFilename,
@@ -24,4 +27,4 @@ const config = {
   externals: [webpackNodeExternals()],
 };
 
-module.exports = merge(universalConfig, config);
+module.exports = merge(universalConfig, productionConfig, config);
