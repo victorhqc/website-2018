@@ -2,7 +2,11 @@ import 'babel-polyfill';
 import express from 'express';
 import { matchRoutes } from 'react-router-config';
 import Routes from './client/Routes';
-import renderer from './renderer';
+import server from './server';
+import ContextManager from './server/helpers/context';
+import {
+  NOT_FOUND,
+} from './constants';
 
 const app = express();
 const PORT = process.env.port || 3000;
@@ -13,15 +17,10 @@ app.get('*', (req, res) => {
   const promises = matchRoutes(Routes, req.path);
 
   Promise.all(promises).then(() => {
-    const context = {};
-    const content = renderer({ req, context });
+    const context = new ContextManager();
+    const content = server({ req, context });
 
-    if (context.url) {
-      res.redirect(301, context.url);
-      return;
-    }
-
-    if (context.NotFound) {
+    if (context.get(NOT_FOUND)) {
       res.status(404);
     }
 

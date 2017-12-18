@@ -1,10 +1,11 @@
-/* eslint no-param-reassign: 0 */
-
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  NOT_FOUND,
+} from '../../constants';
 
 const NotFoundPage = ({ staticContext }) => {
-  staticContext.NotFound = true;
+  staticContext.set(NOT_FOUND, true);
 
   return (
     <h1>Oops, route not found.</h1>
@@ -12,11 +13,15 @@ const NotFoundPage = ({ staticContext }) => {
 };
 
 NotFoundPage.defaultProps = {
-  staticContext: {},
+  staticContext: {
+    set: () => {},
+  },
 };
 
 NotFoundPage.propTypes = {
-  staticContext: PropTypes.shape({}),
+  staticContext: PropTypes.shape({
+    set: PropTypes.func.isRequired,
+  }),
 };
 
 export default {

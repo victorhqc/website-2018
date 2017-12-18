@@ -4,7 +4,7 @@ import { StaticRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import { Helmet } from 'react-helmet';
-import Routes from './client/Routes';
+import Routes from '../client/Routes';
 
 const version = process.env.NODE_ENV === 'production' ? '[AIV]{version}[/AIV]' : 'development';
 const bundle = process.env.NODE_ENV === 'production' ? 'bundle.js' : 'bundle.dev.js';
@@ -34,9 +34,7 @@ export default ({ req, context }) => {
   <body>
     <div id="root">${content}</div>
     <script src="${bundle}?${version}"></script>
-    <script>
-      window.__VERSION__ = '${version}';
-    </script>
+    <script>window.__VERSION__='${version}';</script>
   </body>
 </html>`;
 };
