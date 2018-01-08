@@ -5,7 +5,7 @@ import baseTheme from './base';
 
 const theme = {
   ...baseTheme,
-  color: baseTheme.COLORS.white,
+  color: baseTheme.COLORS.black,
 };
 
 const LightTheme = ({ children }) => (
