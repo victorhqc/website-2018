@@ -19,4 +19,9 @@ const baseTheme = {
   COLORS,
 };
 
+export const getProperty = (property, key) => ({ theme }) => theme[property][key];
+
+export const getColor = color => getProperty('COLORS', color);
+export const getSize = size => getProperty('SIZES', size);
+
 export default baseTheme;

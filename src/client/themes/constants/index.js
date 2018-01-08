@@ -32,6 +32,8 @@ export const FONT_FAMILIES = {
 export const COLORS = {
   white: '#fff',
   black: '#333',
+  steelBlue: '#348AA7',
+  independence: '#525174',
 };
 
 export const BASE_THEME = {

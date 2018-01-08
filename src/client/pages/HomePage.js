@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import distanceInWords from 'date-fns/distance_in_words';
 import distanceInWordsStrict from 'date-fns/distance_in_words_strict';
 import Row from '../components/Row';
+import Background from '../components/Background';
 
 import berlinImage from '../../assets/berlin_1.jpeg';
 
@@ -19,11 +20,11 @@ const yearsOfReact = distanceInWords(
 );
 
 const HomePageWrapper = styled.div`
-  background-image: url(${berlinImage});
 `;
 
 const HomePage = () => (
   <HomePageWrapper>
+    <Background src={berlinImage} />
     <Row>
       <div>
         <h1>
