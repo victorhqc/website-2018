@@ -17,6 +17,18 @@ const paths = {
 
 const env = process.env.NODE_ENV || 'development';
 
+const getFileName = (e) => {
+  if (e === 'production') {
+    return 'static/media/[name].[hash:8].[ext]';
+  }
+
+  return 'static/media-dev/[name].[ext]';
+};
+
+const fileOptions = {
+  name: getFileName(env),
+};
+
 module.exports = {
   // Tell webpack to run babel on every file it runs through
   module: {
@@ -59,7 +71,7 @@ module.exports = {
         ],
         loader: require.resolve('file-loader'),
         options: {
-          name: 'static/media/[name].[hash:8].[ext]',
+          ...fileOptions,
         },
       },
       // "url" loader works like "file" loader except that it embeds assets
@@ -70,7 +82,7 @@ module.exports = {
         loader: require.resolve('url-loader'),
         options: {
           limit: 10000,
-          name: 'static/media/[name].[hash:8].[ext]',
+          ...fileOptions,
         },
       },
       {
