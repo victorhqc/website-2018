@@ -6,6 +6,7 @@
   "website": "http://victorhqc.com",
   "scripts": {
     "test": "jest",
+    "semantic-release": "semantic-release",
     "dev": "npm-run-all --parallel dev:*",
     "dev:server": "nodemon --watch dist --exec \"node dist/bundle.dev.js\"",
     "dev:build-server": "webpack --config webpack/webpack.server.js --watch",
@@ -34,7 +35,6 @@
     "react-router": "^4.2.0",
     "react-router-config": "^1.0.0-beta.4",
     "react-router-dom": "^4.2.2",
-    "redis": "^2.8.0",
     "styled-components": "^2.2.4"
   },
   "devDependencies": {
@@ -57,6 +57,7 @@
     "file-loader": "^1.1.6",
     "lodash-webpack-plugin": "^0.11.4",
     "react-dev-utils": "^4.2.1",
+    "semantic-release": "^11.0.2",
     "uglifyjs-webpack-plugin": "^1.1.4",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
