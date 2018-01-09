@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { renderRoutes } from 'react-router-config';
-import LightTheme from './themes/Light';
+import MainTheme from './themes/Main';
 
 const Wrapper = styled.div`
   font-family: ${props => props.theme.fontFamily};
@@ -12,11 +12,11 @@ const Wrapper = styled.div`
 `;
 
 const App = ({ route }) => (
-  <LightTheme>
+  <MainTheme>
     <Wrapper>
       {renderRoutes(route.routes)}
     </Wrapper>
-  </LightTheme>
+  </MainTheme>
 );
 
 App.propTypes = {

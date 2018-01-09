@@ -23,6 +23,7 @@ export const FONT_SIZES = {
   sm: 12,
   md: 16,
   lg: 24,
+  xl: 48,
 };
 
 export const FONT_FAMILIES = {

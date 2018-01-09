@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import { getColor, getSize } from '../themes/base';
 
-const primaryColor = getColor('steelBlue');
-const secondaryColor = getColor('independence');
+const primaryColor = () => getColor('steelBlue');
+const secondaryColor = () => getColor('independence');
 
 const getBackground = (props) => {
   if (!props.src) {
-    return `linear-gradient(-45deg, ${primaryColor(props)}, ${secondaryColor(props)})`;
+    return `linear-gradient(-45deg, ${primaryColor()}, ${secondaryColor()})`;
   }
 
   return `
-    url(${props.src}), linear-gradient(-45deg, ${primaryColor(props)}, ${secondaryColor(props)})
+    url(${props.src}), linear-gradient(-45deg, ${primaryColor()}, ${secondaryColor()})
     `;
 };
 
