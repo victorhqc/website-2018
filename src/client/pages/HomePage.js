@@ -33,7 +33,7 @@ const HomePage = () => (
       <Background src={berlinImage} />
       <Container verticalAlign>
         <Row>
-          <Column size={1 / 2}>
+          <Column>
             <H1>Victor Quiroz Castro</H1>
             <H2 noMargin>
               Software engineer
@@ -42,7 +42,7 @@ const HomePage = () => (
               <Link href="https://github.com/victorhqc">@victorhqc</Link>
             </H2>
           </Column>
-          <Column size={1 / 2}>
+          <Column>
             <Container
               noMargin
               textAlign="left"
