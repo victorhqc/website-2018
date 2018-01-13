@@ -46,6 +46,12 @@ const HomePage = () => (
             <Container
               noMargin
               textAlign="left"
+              padding={{
+                top: 0,
+                bottom: 0,
+                right: 20,
+                left: 20,
+              }}
             >
               <H1>About me</H1>
               <P lead>

@@ -5,6 +5,7 @@ import {
   setPadding,
   setMargin,
   noMargin,
+  noPadding,
 } from '../themes/utils';
 
 const Container = styled.div`
@@ -16,6 +17,7 @@ const Container = styled.div`
   ${setVerticalAlign}
   ${setTextAlign}
   ${noMargin}
+  ${noPadding}
 `;
 
 export default Container;

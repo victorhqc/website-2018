@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const mediaBreakPoint = size => `
-  @media screen and (max-width: ${size}px) {
+  @media (max-width: ${size}px) {
     flex-wrap: wrap;
   }
 `;
