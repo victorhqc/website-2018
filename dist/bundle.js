@@ -1,4 +1,4 @@
-// [AIV]  Build version: 0.0.0 - Thursday, January 11th, 2018, 6:45:52 PM  
+// [AIV]  Build version: 0.0.0 - Sunday, January 14th, 2018, 12:56:53 AM  
  /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -146,45 +146,60 @@ module.exports = require("react-router-config");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.setTextAlign = exports.setVerticalAlign = exports.noPadding = exports.noMargin = exports.setPadding = exports.setMargin = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var setMargin = exports.setMargin = function setMargin(props) {
-  if (!props.margin) {
+var _capitalize = __webpack_require__(21);
+
+var _capitalize2 = _interopRequireDefault(_capitalize);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var setSpacing = function setSpacing(props, keyName) {
+  if (!props[keyName]) {
     return '';
   }
+
+  var defaultProps = typeof props[keyName] === 'number' ? {
+    top: props[keyName],
+    bottom: props[keyName],
+    right: props[keyName],
+    left: props[keyName]
+  } : props[keyName];
 
   var base = _extends({
     top: 0,
     bottom: 0,
     right: 0,
     left: 0
-  }, props.margin);
+  }, defaultProps);
 
-  return '\n    margin: ' + base.top + 'px ' + base.right + 'px ' + base.bottom + 'px ' + base.left + 'px;\n  ';
+  return '\n  ' + keyName + ': ' + base.top + 'px ' + base.right + 'px ' + base.bottom + 'px ' + base.left + 'px;\n  ';
+};
+
+var setMargin = exports.setMargin = function setMargin(props) {
+  return setSpacing(props, 'margin');
 };
 
 var setPadding = exports.setPadding = function setPadding(props) {
-  if (!props.padding) {
-    return '';
-  }
-
-  var base = _extends({
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0
-  }, props.padding);
-
-  return '\n    padding: ' + base.top + 'px ' + base.right + 'px ' + base.bottom + 'px ' + base.left + 'px;\n  ';
+  return setSpacing(props, 'padding');
 };
 
-var noMargin = exports.noMargin = function noMargin(props) {
-  if (props.noMargin) {
-    return 'margin: 0;';
+var noSpacing = function noSpacing(props, keyName) {
+  if (props['no' + (0, _capitalize2.default)(keyName)]) {
+    return keyName + ': 0;';
   }
 
   return '';
+};
+
+var noMargin = exports.noMargin = function noMargin(props) {
+  return noSpacing(props, 'margin');
+};
+
+var noPadding = exports.noPadding = function noPadding(props) {
+  return noSpacing(props, 'padding');
 };
 
 var setVerticalAlign = exports.setVerticalAlign = function setVerticalAlign(props) {
@@ -224,7 +239,7 @@ var _HomePage = __webpack_require__(14);
 
 var _HomePage2 = _interopRequireDefault(_HomePage);
 
-var _NotFoundPage = __webpack_require__(27);
+var _NotFoundPage = __webpack_require__(28);
 
 var _NotFoundPage2 = _interopRequireDefault(_NotFoundPage);
 
@@ -270,11 +285,11 @@ var _Routes = __webpack_require__(6);
 
 var _Routes2 = _interopRequireDefault(_Routes);
 
-var _server = __webpack_require__(28);
+var _server = __webpack_require__(29);
 
 var _server2 = _interopRequireDefault(_server);
 
-var _context = __webpack_require__(32);
+var _context = __webpack_require__(33);
 
 var _context2 = _interopRequireDefault(_context);
 
@@ -524,27 +539,27 @@ var _Container = __webpack_require__(20);
 
 var _Container2 = _interopRequireDefault(_Container);
 
-var _Background = __webpack_require__(21);
+var _Background = __webpack_require__(22);
 
 var _Background2 = _interopRequireDefault(_Background);
 
-var _H = __webpack_require__(22);
+var _H = __webpack_require__(23);
 
 var _H2 = _interopRequireDefault(_H);
 
-var _H3 = __webpack_require__(23);
+var _H3 = __webpack_require__(24);
 
 var _H4 = _interopRequireDefault(_H3);
 
-var _P = __webpack_require__(24);
+var _P = __webpack_require__(25);
 
 var _P2 = _interopRequireDefault(_P);
 
-var _Link = __webpack_require__(25);
+var _Link = __webpack_require__(26);
 
 var _Link2 = _interopRequireDefault(_Link);
 
-var _berlin_ = __webpack_require__(26);
+var _berlin_ = __webpack_require__(27);
 
 var _berlin_2 = _interopRequireDefault(_berlin_);
 
@@ -572,7 +587,7 @@ var HomePage = function HomePage() {
           null,
           _react2.default.createElement(
             _Column2.default,
-            { size: 1 / 2 },
+            null,
             _react2.default.createElement(
               _H2.default,
               null,
@@ -595,12 +610,18 @@ var HomePage = function HomePage() {
           ),
           _react2.default.createElement(
             _Column2.default,
-            { size: 1 / 2 },
+            null,
             _react2.default.createElement(
               _Container2.default,
               {
                 noMargin: true,
-                textAlign: 'left'
+                textAlign: 'left',
+                padding: {
+                  top: 0,
+                  bottom: 0,
+                  right: 20,
+                  left: 20
+                }
               },
               _react2.default.createElement(
                 _H2.default,
@@ -757,13 +778,25 @@ var _styledComponents = __webpack_require__(0);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+var _propTypes = __webpack_require__(3);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var Column = _styledComponents2.default.div(_templateObject, function (props) {
-  return props.size * 100 + '%' || '100%';
+  return (props.size || 1) * 100 + '%';
 });
+
+Column.propTypes = {
+  size: _propTypes2.default.number
+};
+
+Column.defaltProps = {
+  size: 1
+};
 
 exports.default = Column;
 
@@ -778,7 +811,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  font-family: ', ';\n  color: ', ';\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n'], ['\n  font-family: ', ';\n  color: ', ';\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  font-family: ', ';\n  color: ', ';\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n'], ['\n  font-family: ', ';\n  color: ', ';\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n']);
 
 var _styledComponents = __webpack_require__(0);
 
@@ -794,12 +827,18 @@ var Container = _styledComponents2.default.div(_templateObject, function (props)
   return props.theme.fontFamily;
 }, function (props) {
   return props.theme.color;
-}, _utils.setMargin, _utils.setPadding, _utils.setVerticalAlign, _utils.setTextAlign, _utils.noMargin);
+}, _utils.setMargin, _utils.setPadding, _utils.setVerticalAlign, _utils.setTextAlign, _utils.noMargin, _utils.noPadding);
 
 exports.default = Container;
 
 /***/ }),
 /* 21 */
+/***/ (function(module, exports) {
+
+module.exports = require("lodash/capitalize");
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -841,7 +880,7 @@ var Background = _styledComponents2.default.div(_templateObject, primaryColor, p
 exports.default = Background;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -870,7 +909,7 @@ var H1 = _styledComponents2.default.h1(_templateObject, (0, _base.getFontSize)('
 exports.default = H1;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -899,7 +938,7 @@ var H2 = _styledComponents2.default.h2(_templateObject, (0, _base.getFontSize)('
 exports.default = H2;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -934,7 +973,7 @@ var P = _styledComponents2.default.p(_templateObject, fontSize);
 exports.default = P;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -961,13 +1000,13 @@ var Link = _styledComponents2.default.a(_templateObject, function (props) {
 exports.default = Link;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/media/berlin_1.3be65774.jpeg";
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1018,7 +1057,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1032,15 +1071,15 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(29);
+var _server = __webpack_require__(30);
 
-var _reactRouterDom = __webpack_require__(30);
+var _reactRouterDom = __webpack_require__(31);
 
 var _reactRouterConfig = __webpack_require__(4);
 
 var _styledComponents = __webpack_require__(0);
 
-var _reactHelmet = __webpack_require__(31);
+var _reactHelmet = __webpack_require__(32);
 
 var _Routes = __webpack_require__(6);
 
@@ -1078,25 +1117,25 @@ exports.default = function (_ref) {
 };
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-router-dom");
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-helmet");
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
