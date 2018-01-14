@@ -3,10 +3,10 @@ import { getFontSize } from '../themes/base';
 
 const fontSize = (props) => {
   if (props.lead) {
-    return '20px';
+    return '1.2em';
   }
 
-  return `${getFontSize('md')}px`;
+  return `${getFontSize('md')}em`;
 };
 
 const P = styled.p`

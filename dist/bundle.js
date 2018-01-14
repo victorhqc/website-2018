@@ -1,4 +1,4 @@
-// [AIV]  Build version: 0.0.0 - Sunday, January 14th, 2018, 12:56:53 AM  
+// [AIV]  Build version: 0.0.0 - Sunday, January 14th, 2018, 1:03:54 AM  
  /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -479,10 +479,10 @@ var MARGIN = exports.MARGIN = {
 };
 
 var FONT_SIZES = exports.FONT_SIZES = {
-  sm: 12,
-  md: 16,
-  lg: 24,
-  xl: 48
+  sm: 0.8,
+  md: 1,
+  lg: 2,
+  xl: 3
 };
 
 var FONT_FAMILIES = exports.FONT_FAMILIES = {
@@ -890,7 +890,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  font-size: ', ';\n  font-weight: lighter;\n\n  ', '\n'], ['\n  font-size: ', ';\n  font-weight: lighter;\n\n  ', '\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  font-size: ', 'em;\n  font-weight: lighter;\n\n  ', '\n'], ['\n  font-size: ', 'em;\n  font-weight: lighter;\n\n  ', '\n']);
 
 var _styledComponents = __webpack_require__(0);
 
@@ -919,7 +919,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  font-size: ', ';\n  font-weight: lighter;\n\n  ', '\n'], ['\n  font-size: ', ';\n  font-weight: lighter;\n\n  ', '\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  font-size: ', 'em;\n  font-weight: lighter;\n\n  ', '\n'], ['\n  font-size: ', 'em;\n  font-weight: lighter;\n\n  ', '\n']);
 
 var _styledComponents = __webpack_require__(0);
 
@@ -962,10 +962,10 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var fontSize = function fontSize(props) {
   if (props.lead) {
-    return '20px';
+    return '1.2em';
   }
 
-  return (0, _base.getFontSize)('md') + 'px';
+  return (0, _base.getFontSize)('md') + 'em';
 };
 
 var P = _styledComponents2.default.p(_templateObject, fontSize);

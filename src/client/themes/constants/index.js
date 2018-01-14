@@ -20,10 +20,10 @@ export const MARGIN = {
 };
 
 export const FONT_SIZES = {
-  sm: 12,
-  md: 16,
-  lg: 24,
-  xl: 48,
+  sm: 0.8,
+  md: 1,
+  lg: 2,
+  xl: 3,
 };
 
 export const FONT_FAMILIES = {
