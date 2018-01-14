@@ -1,4 +1,4 @@
-// [AIV]  Build version: 0.0.0 - Sunday, January 14th, 2018, 1:39:15 AM  
+// [AIV]  Build version: 0.0.0 - Sunday, January 14th, 2018, 1:41:20 PM  
  /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -61,7 +61,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -88,7 +88,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getPadding = exports.getMargin = exports.getFontSize = exports.getSize = exports.getColor = exports.getProperty = undefined;
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(15);
 
 var baseTheme = {
   fontFamily: _constants.FONT_FAMILIES.roboto,
@@ -150,7 +150,7 @@ exports.setTextAlign = exports.setVerticalAlign = exports.noPadding = exports.no
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _capitalize = __webpack_require__(15);
+var _capitalize = __webpack_require__(16);
 
 var _capitalize2 = _interopRequireDefault(_capitalize);
 
@@ -231,15 +231,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _App = __webpack_require__(12);
+var _App = __webpack_require__(13);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _HomePage = __webpack_require__(16);
+var _HomePage = __webpack_require__(17);
 
 var _HomePage2 = _interopRequireDefault(_HomePage);
 
-var _NotFoundPage = __webpack_require__(28);
+var _NotFoundPage = __webpack_require__(29);
 
 var _NotFoundPage2 = _interopRequireDefault(_NotFoundPage);
 
@@ -285,6 +285,12 @@ exports.default = Container;
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-helmet");
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -298,15 +304,15 @@ Object.defineProperty(exports, "__esModule", {
 var NOT_FOUND = exports.NOT_FOUND = 'notFound';
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(10);
+__webpack_require__(11);
 
-var _express = __webpack_require__(11);
+var _express = __webpack_require__(12);
 
 var _express2 = _interopRequireDefault(_express);
 
@@ -316,7 +322,7 @@ var _Routes = __webpack_require__(6);
 
 var _Routes2 = _interopRequireDefault(_Routes);
 
-var _server = __webpack_require__(29);
+var _server = __webpack_require__(30);
 
 var _server2 = _interopRequireDefault(_server);
 
@@ -324,7 +330,7 @@ var _context = __webpack_require__(33);
 
 var _context2 = _interopRequireDefault(_context);
 
-var _constants = __webpack_require__(8);
+var _constants = __webpack_require__(9);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -353,19 +359,19 @@ app.listen(PORT, function () {
 });
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-polyfill");
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -385,7 +391,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _reactRouterConfig = __webpack_require__(4);
 
-var _Main = __webpack_require__(13);
+var _Main = __webpack_require__(14);
 
 var _Main2 = _interopRequireDefault(_Main);
 
@@ -422,7 +428,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -472,7 +478,7 @@ MainTheme.propTypes = {
 exports.default = MainTheme;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -525,13 +531,13 @@ var BASE_THEME = exports.BASE_THEME = {
 };
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = require("lodash/capitalize");
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -545,23 +551,25 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _distance_in_words = __webpack_require__(17);
+var _reactHelmet = __webpack_require__(8);
+
+var _distance_in_words = __webpack_require__(18);
 
 var _distance_in_words2 = _interopRequireDefault(_distance_in_words);
 
-var _distance_in_words_strict = __webpack_require__(18);
+var _distance_in_words_strict = __webpack_require__(19);
 
 var _distance_in_words_strict2 = _interopRequireDefault(_distance_in_words_strict);
 
-var _Light = __webpack_require__(19);
+var _Light = __webpack_require__(20);
 
 var _Light2 = _interopRequireDefault(_Light);
 
-var _Row = __webpack_require__(20);
+var _Row = __webpack_require__(21);
 
 var _Row2 = _interopRequireDefault(_Row);
 
-var _Column = __webpack_require__(21);
+var _Column = __webpack_require__(22);
 
 var _Column2 = _interopRequireDefault(_Column);
 
@@ -569,27 +577,27 @@ var _Container = __webpack_require__(7);
 
 var _Container2 = _interopRequireDefault(_Container);
 
-var _Background = __webpack_require__(22);
+var _Background = __webpack_require__(23);
 
 var _Background2 = _interopRequireDefault(_Background);
 
-var _H = __webpack_require__(23);
+var _H = __webpack_require__(24);
 
 var _H2 = _interopRequireDefault(_H);
 
-var _H3 = __webpack_require__(24);
+var _H3 = __webpack_require__(25);
 
 var _H4 = _interopRequireDefault(_H3);
 
-var _P = __webpack_require__(25);
+var _P = __webpack_require__(26);
 
 var _P2 = _interopRequireDefault(_P);
 
-var _Link = __webpack_require__(26);
+var _Link = __webpack_require__(27);
 
 var _Link2 = _interopRequireDefault(_Link);
 
-var _berlin_ = __webpack_require__(27);
+var _berlin_ = __webpack_require__(28);
 
 var _berlin_2 = _interopRequireDefault(_berlin_);
 
@@ -608,6 +616,23 @@ var HomePage = function HomePage() {
     _react2.default.createElement(
       _react.Fragment,
       null,
+      _react2.default.createElement(
+        _reactHelmet.Helmet,
+        null,
+        _react2.default.createElement(
+          'title',
+          null,
+          'Victor Quiroz Castro - Software Engineer'
+        ),
+        _react2.default.createElement('meta', {
+          name: 'description',
+          content: 'Web Developer with ' + yearsOfExperience + ' of experience'
+        }),
+        _react2.default.createElement('meta', {
+          name: 'keywords',
+          content: 'developer, engineer, software engineer'
+        })
+      ),
       _react2.default.createElement(_Background2.default, { src: _berlin_2.default }),
       _react2.default.createElement(
         _Container2.default,
@@ -681,19 +706,19 @@ exports.default = {
 };
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = require("date-fns/distance_in_words");
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = require("date-fns/distance_in_words_strict");
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -745,7 +770,7 @@ LightTheme.propTypes = {
 exports.default = LightTheme;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -792,7 +817,7 @@ var Row = _styledComponents2.default.div(_templateObject, function (props) {
 exports.default = Row;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -831,7 +856,7 @@ Column.defaltProps = {
 exports.default = Column;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -873,7 +898,7 @@ var Background = _styledComponents2.default.div(_templateObject, primaryColor, p
 exports.default = Background;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -902,7 +927,7 @@ var H1 = _styledComponents2.default.h1(_templateObject, (0, _base.getFontSize)('
 exports.default = H1;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -931,7 +956,7 @@ var H2 = _styledComponents2.default.h2(_templateObject, (0, _base.getFontSize)('
 exports.default = H2;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -966,7 +991,7 @@ var P = _styledComponents2.default.p(_templateObject, fontSize);
 exports.default = P;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -993,13 +1018,13 @@ var Link = _styledComponents2.default.a(_templateObject, function (props) {
 exports.default = Link;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/media/berlin_1.3be65774.jpeg";
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1017,7 +1042,7 @@ var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _constants = __webpack_require__(8);
+var _constants = __webpack_require__(9);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1050,7 +1075,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1064,15 +1089,15 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(30);
+var _server = __webpack_require__(31);
 
-var _reactRouterDom = __webpack_require__(31);
+var _reactRouterDom = __webpack_require__(32);
 
 var _reactRouterConfig = __webpack_require__(4);
 
 var _styledComponents = __webpack_require__(0);
 
-var _reactHelmet = __webpack_require__(32);
+var _reactHelmet = __webpack_require__(8);
 
 var _Routes = __webpack_require__(6);
 
@@ -1106,26 +1131,20 @@ exports.default = function (_ref) {
 
   var helmet = _reactHelmet.Helmet.renderStatic();
 
-  return '<html>\n  <head>\n    ' + helmet.title.toString() + '\n    ' + helmet.meta.toString() + '\n    <meta name="viewport" content="width=device-width, initial-scale=1">\n    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">\n    <!--\n      Font Face imported from https://fonts.google.com\n      Typography selected is \'Roboto\'\n    -->\n    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />\n    ' + styleTags + '\n  </head>\n  <body>\n    <div id="root">' + content + '</div>\n    <script src="' + bundle + '?' + version + '"></script>\n    <script>window.__VERSION__=\'' + version + '\';</script>\n  </body>\n</html>';
+  return '<html>\n  <head>\n    ' + helmet.title.toString() + '\n    ' + helmet.meta.toString() + '\n    <meta name="viewport" content="width=device-width, initial-scale=1">\n    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">\n    <!--\n      Font Face imported from https://fonts.google.com\n      Typography selected is \'Roboto\'\n    -->\n    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />\n    ' + styleTags + '\n  </head>\n  <body>\n    <div id="root">' + content + '</div>\n    <script src="' + bundle + '?' + version + '"></script>\n    <script>window.__VERSION__=\'' + version + '\';</script>\n    <!-- Global site tag (gtag.js) - Google Analytics -->\n    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77111108-1"></script>\n    <script>\n      window.dataLayer = window.dataLayer || [];\n      function gtag(){dataLayer.push(arguments);}\n      gtag(\'js\', new Date());\n\n      gtag(\'config\', \'UA-77111108-1\');\n    </script>\n\n  </body>\n</html>';
 };
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-dom/server");
 
 /***/ }),
 /* 31 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-router-dom");
+module.exports = require("react-dom/server");
 
 /***/ }),
 /* 32 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-helmet");
+module.exports = require("react-router-dom");
 
 /***/ }),
 /* 33 */

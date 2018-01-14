@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Helmet } from 'react-helmet';
 import distanceInWords from 'date-fns/distance_in_words';
 import distanceInWordsStrict from 'date-fns/distance_in_words_strict';
 
@@ -30,6 +31,17 @@ const yearsOfReact = distanceInWords(
 const HomePage = () => (
   <LightTheme>
     <Fragment>
+      <Helmet>
+        <title>Victor Quiroz Castro - Software Engineer</title>
+        <meta
+          name="description"
+          content={`Web Developer with ${yearsOfExperience} of experience`}
+        />
+        <meta
+          name="keywords"
+          content="developer, engineer, software engineer"
+        />
+      </Helmet>
       <Background src={berlinImage} />
       <Container verticalAlign>
         <Row>
