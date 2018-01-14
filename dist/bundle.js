@@ -1,4 +1,4 @@
-// [AIV]  Build version: 0.0.0 - Sunday, January 14th, 2018, 1:41:20 PM  
+// [AIV]  Build version: 0.0.0 - Sunday, January 14th, 2018, 3:42:27 PM  
  /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -624,6 +624,23 @@ var HomePage = function HomePage() {
           null,
           'Victor Quiroz Castro - Software Engineer'
         ),
+        _react2.default.createElement('meta', { property: 'og:site_name', content: 'victorhqc' }),
+        _react2.default.createElement('meta', {
+          property: 'og:title',
+          content: 'Victor Quiroz Castro - Software Engineer'
+        }),
+        _react2.default.createElement('meta', { property: 'og:url', content: 'http://victorhqc.com' }),
+        _react2.default.createElement('meta', { property: 'og:type', content: 'website' }),
+        _react2.default.createElement('meta', { property: 'og:author', content: 'https://github.com/victorhqc' }),
+        _react2.default.createElement('meta', { property: 'og:image', content: _berlin_2.default }),
+        _react2.default.createElement('meta', { property: 'og:image:width', content: '754' }),
+        _react2.default.createElement('meta', { property: 'og:image:height', content: '566' }),
+        _react2.default.createElement('meta', { property: 'twitter:card', content: 'summary_large_image' }),
+        _react2.default.createElement('meta', { property: 'twitter:site', content: '@victorhqc' }),
+        _react2.default.createElement('meta', { property: 'twitter:creator', content: 'https://github.com/victorhqc' }),
+        _react2.default.createElement('meta', { property: 'twitter:title', content: 'victorhqc' }),
+        _react2.default.createElement('meta', { property: 'twitter:description', content: 'Victor Quiroz Castro - Software Engineer' }),
+        _react2.default.createElement('meta', { property: 'twitter:image:src', content: _berlin_2.default }),
         _react2.default.createElement('meta', {
           name: 'description',
           content: 'Web Developer with ' + yearsOfExperience + ' of experience'

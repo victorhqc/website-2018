@@ -33,6 +33,25 @@ const HomePage = () => (
     <Fragment>
       <Helmet>
         <title>Victor Quiroz Castro - Software Engineer</title>
+        <meta property="og:site_name" content="victorhqc" />
+        <meta
+          property="og:title"
+          content="Victor Quiroz Castro - Software Engineer"
+        />
+        <meta property="og:url" content="http://victorhqc.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:author" content="https://github.com/victorhqc" />
+        <meta property="og:image" content={berlinImage} />
+        <meta property="og:image:width" content="754" />
+        <meta property="og:image:height" content="566" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:site" content="@victorhqc" />
+        <meta property="twitter:creator" content="https://github.com/victorhqc" />
+        <meta property="twitter:title" content="victorhqc" />
+        <meta property="twitter:description" content="Victor Quiroz Castro - Software Engineer" />
+        <meta property="twitter:image:src" content={berlinImage} />
+
         <meta
           name="description"
           content={`Web Developer with ${yearsOfExperience} of experience`}
