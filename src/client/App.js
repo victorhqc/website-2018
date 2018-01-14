@@ -1,21 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { renderRoutes } from 'react-router-config';
 import MainTheme from './themes/Main';
-
-const Wrapper = styled.div`
-  font-family: ${props => props.theme.fontFamily};
-  color: ${props => props.theme.color};
-  padding: 0;
-  margin: 0;
-`;
+import Container from './components/Container';
 
 const App = ({ route }) => (
   <MainTheme>
-    <Wrapper>
+    <Container
+      noPadding
+      noMargin
+    >
       {renderRoutes(route.routes)}
-    </Wrapper>
+    </Container>
   </MainTheme>
 );
 

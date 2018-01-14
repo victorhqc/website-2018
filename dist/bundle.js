@@ -1,4 +1,4 @@
-// [AIV]  Build version: 0.0.0 - Sunday, January 14th, 2018, 1:03:54 AM  
+// [AIV]  Build version: 0.0.0 - Sunday, January 14th, 2018, 1:39:15 AM  
  /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -61,7 +61,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -88,7 +88,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getPadding = exports.getMargin = exports.getFontSize = exports.getSize = exports.getColor = exports.getProperty = undefined;
 
-var _constants = __webpack_require__(13);
+var _constants = __webpack_require__(14);
 
 var baseTheme = {
   fontFamily: _constants.FONT_FAMILIES.roboto,
@@ -150,7 +150,7 @@ exports.setTextAlign = exports.setVerticalAlign = exports.noPadding = exports.no
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _capitalize = __webpack_require__(21);
+var _capitalize = __webpack_require__(15);
 
 var _capitalize2 = _interopRequireDefault(_capitalize);
 
@@ -231,11 +231,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _App = __webpack_require__(11);
+var _App = __webpack_require__(12);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _HomePage = __webpack_require__(14);
+var _HomePage = __webpack_require__(16);
 
 var _HomePage2 = _interopRequireDefault(_HomePage);
 
@@ -262,9 +262,26 @@ exports.default = [_extends({}, _App2.default, {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-/* eslint import/prefer-default-export: 0 */
 
-var NOT_FOUND = exports.NOT_FOUND = 'notFound';
+var _templateObject = _taggedTemplateLiteral(['\n  font-family: ', ';\n  color: ', ';\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n'], ['\n  font-family: ', ';\n  color: ', ';\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n']);
+
+var _styledComponents = __webpack_require__(0);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _utils = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents2.default.div(_templateObject, function (props) {
+  return props.theme.fontFamily;
+}, function (props) {
+  return props.theme.color;
+}, _utils.setMargin, _utils.setPadding, _utils.setVerticalAlign, _utils.setTextAlign, _utils.noMargin, _utils.noPadding);
+
+exports.default = Container;
 
 /***/ }),
 /* 8 */
@@ -273,9 +290,23 @@ var NOT_FOUND = exports.NOT_FOUND = 'notFound';
 "use strict";
 
 
-__webpack_require__(9);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/* eslint import/prefer-default-export: 0 */
 
-var _express = __webpack_require__(10);
+var NOT_FOUND = exports.NOT_FOUND = 'notFound';
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(10);
+
+var _express = __webpack_require__(11);
 
 var _express2 = _interopRequireDefault(_express);
 
@@ -293,7 +324,7 @@ var _context = __webpack_require__(33);
 
 var _context2 = _interopRequireDefault(_context);
 
-var _constants = __webpack_require__(7);
+var _constants = __webpack_require__(8);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -322,19 +353,19 @@ app.listen(PORT, function () {
 });
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-polyfill");
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -344,8 +375,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  font-family: ', ';\n  color: ', ';\n  padding: 0;\n  margin: 0;\n'], ['\n  font-family: ', ';\n  color: ', ';\n  padding: 0;\n  margin: 0;\n']);
-
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -354,25 +383,17 @@ var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _styledComponents = __webpack_require__(0);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
 var _reactRouterConfig = __webpack_require__(4);
 
-var _Main = __webpack_require__(12);
+var _Main = __webpack_require__(13);
 
 var _Main2 = _interopRequireDefault(_Main);
 
+var _Container = __webpack_require__(7);
+
+var _Container2 = _interopRequireDefault(_Container);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Wrapper = _styledComponents2.default.div(_templateObject, function (props) {
-  return props.theme.fontFamily;
-}, function (props) {
-  return props.theme.color;
-});
 
 var App = function App(_ref) {
   var route = _ref.route;
@@ -380,8 +401,11 @@ var App = function App(_ref) {
     _Main2.default,
     null,
     _react2.default.createElement(
-      Wrapper,
-      null,
+      _Container2.default,
+      {
+        noPadding: true,
+        noMargin: true
+      },
       (0, _reactRouterConfig.renderRoutes)(route.routes)
     )
   );
@@ -398,7 +422,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -448,7 +472,7 @@ MainTheme.propTypes = {
 exports.default = MainTheme;
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -501,7 +525,13 @@ var BASE_THEME = exports.BASE_THEME = {
 };
 
 /***/ }),
-/* 14 */
+/* 15 */
+/***/ (function(module, exports) {
+
+module.exports = require("lodash/capitalize");
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -515,27 +545,27 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _distance_in_words = __webpack_require__(15);
+var _distance_in_words = __webpack_require__(17);
 
 var _distance_in_words2 = _interopRequireDefault(_distance_in_words);
 
-var _distance_in_words_strict = __webpack_require__(16);
+var _distance_in_words_strict = __webpack_require__(18);
 
 var _distance_in_words_strict2 = _interopRequireDefault(_distance_in_words_strict);
 
-var _Light = __webpack_require__(17);
+var _Light = __webpack_require__(19);
 
 var _Light2 = _interopRequireDefault(_Light);
 
-var _Row = __webpack_require__(18);
+var _Row = __webpack_require__(20);
 
 var _Row2 = _interopRequireDefault(_Row);
 
-var _Column = __webpack_require__(19);
+var _Column = __webpack_require__(21);
 
 var _Column2 = _interopRequireDefault(_Column);
 
-var _Container = __webpack_require__(20);
+var _Container = __webpack_require__(7);
 
 var _Container2 = _interopRequireDefault(_Container);
 
@@ -651,19 +681,19 @@ exports.default = {
 };
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = require("date-fns/distance_in_words");
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = require("date-fns/distance_in_words_strict");
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -715,7 +745,7 @@ LightTheme.propTypes = {
 exports.default = LightTheme;
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -762,7 +792,7 @@ var Row = _styledComponents2.default.div(_templateObject, function (props) {
 exports.default = Row;
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -799,43 +829,6 @@ Column.defaltProps = {
 };
 
 exports.default = Column;
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _templateObject = _taggedTemplateLiteral(['\n  font-family: ', ';\n  color: ', ';\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n'], ['\n  font-family: ', ';\n  color: ', ';\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n']);
-
-var _styledComponents = __webpack_require__(0);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _utils = __webpack_require__(5);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Container = _styledComponents2.default.div(_templateObject, function (props) {
-  return props.theme.fontFamily;
-}, function (props) {
-  return props.theme.color;
-}, _utils.setMargin, _utils.setPadding, _utils.setVerticalAlign, _utils.setTextAlign, _utils.noMargin, _utils.noPadding);
-
-exports.default = Container;
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports) {
-
-module.exports = require("lodash/capitalize");
 
 /***/ }),
 /* 22 */
@@ -1024,7 +1017,7 @@ var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _constants = __webpack_require__(7);
+var _constants = __webpack_require__(8);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1113,7 +1106,7 @@ exports.default = function (_ref) {
 
   var helmet = _reactHelmet.Helmet.renderStatic();
 
-  return '<html>\n  <head>\n    ' + helmet.title.toString() + '\n    ' + helmet.meta.toString() + '\n    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">\n    <!--\n      Font Face imported from https://fonts.google.com\n      Typography selected is \'Roboto\'\n    -->\n    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />\n    ' + styleTags + '\n  </head>\n  <body>\n    <div id="root">' + content + '</div>\n    <script src="' + bundle + '?' + version + '"></script>\n    <script>window.__VERSION__=\'' + version + '\';</script>\n  </body>\n</html>';
+  return '<html>\n  <head>\n    ' + helmet.title.toString() + '\n    ' + helmet.meta.toString() + '\n    <meta name="viewport" content="width=device-width, initial-scale=1">\n    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">\n    <!--\n      Font Face imported from https://fonts.google.com\n      Typography selected is \'Roboto\'\n    -->\n    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />\n    ' + styleTags + '\n  </head>\n  <body>\n    <div id="root">' + content + '</div>\n    <script src="' + bundle + '?' + version + '"></script>\n    <script>window.__VERSION__=\'' + version + '\';</script>\n  </body>\n</html>';
 };
 
 /***/ }),
