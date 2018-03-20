@@ -94,7 +94,7 @@ const HomePage = () => (
               <P lead>
                 {`
                   I've been using React.js and Redux (${yearsOfReact} now)
-                  with Functional Oriented Programming.
+                  with Functional Programming.
                 `}
               </P>
             </Container>
