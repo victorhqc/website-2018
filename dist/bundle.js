@@ -1,4 +1,4 @@
-// [AIV]  Build version: 0.0.0 - Sunday, January 14th, 2018, 3:42:27 PM  
+// [AIV]  Build version: 0.0.0 - Tuesday, March 20th, 2018, 12:12:02 PM  
  /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -708,7 +708,7 @@ var HomePage = function HomePage() {
               _react2.default.createElement(
                 _P2.default,
                 { lead: true },
-                '\n                  I\'ve been using React.js and Redux (' + yearsOfReact + ' now)\n                  with Functional Oriented Programming.\n                '
+                '\n                  I\'ve been using React.js and Redux (' + yearsOfReact + ' now)\n                  with Functional Programming.\n                '
               )
             )
           )
